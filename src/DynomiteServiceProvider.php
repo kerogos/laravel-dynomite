@@ -8,6 +8,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\ServiceProvider;
 use Kerogos\LaravelDynomite\Connections\PhpDynomiteConnection;
+use Kerogos\LaravelDynomite\Connectors\DynomiteConnector;
 use function PHPUnit\Framework\never;
 
 class DynomiteServiceProvider extends RedisServiceProvider
@@ -23,7 +24,7 @@ class DynomiteServiceProvider extends RedisServiceProvider
             $config = $app->make('config')->get('database.redis', []);
             $redisManager = new RedisManager($app, Arr::pull($config, 'client', 'dynomite'), $config);
             $redisManager->extend('dynomite',function (){
-                return new PhpDynomiteConnection;
+                return new DynomiteConnector;
             });
             return $redisManager;
         });
