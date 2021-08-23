@@ -17,6 +17,6 @@ class PhpDynomiteConnection extends PhpRedisConnection
     {
         if(config('dynomite.debug'))
             \Log::debug('DynomiteConnectionCommand',['command' => $method]);
-        return parent::command($method, $parameters); 
+        return parent::command($method, $parameters);
     }
 }
