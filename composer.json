@@ -1,0 +1,21 @@
+{
+    "name": "kerogos/laravel-dynomite",
+    "description": "Netflix DynomiteDB connector based on laravel redis package",
+    "type": "library",
+    "require": {
+        "illuminate/redis": "7.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kerogos\\LaravelDynomite\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "KEROGOS - Konrad Gorczyca",
+            "email": "konrad.github@kerogos.pl"
+        }
+    ],
+    "minimum-stability": "dev"
+}
