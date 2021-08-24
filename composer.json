@@ -17,5 +17,12 @@
             "email": "konrad.github@kerogos.pl"
         }
     ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kerogos\\LaravelDynomite\\DynomiteServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev"
 }
